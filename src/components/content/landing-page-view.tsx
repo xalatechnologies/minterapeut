@@ -155,9 +155,9 @@ export async function LandingPageView({ file }: { file: LandingPageFile }) {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0b1210]/92 via-[#0b1210]/55 to-[#0b1210]/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1210]/75 via-transparent to-[#0b1210]/30" />
 
-        <div className="container-site relative flex min-h-[68vh] flex-col justify-end pb-16 pt-28 sm:min-h-[78vh] sm:pb-24">
-          <div className="animate-fade-up mb-6 text-white">
-            <SiteLogo size="lg" />
+        <div className="container-site relative flex min-h-[68vh] flex-col justify-end pb-12 pt-24 sm:min-h-[78vh] sm:pb-24 sm:pt-28">
+          <div className="animate-fade-up mb-5 text-white sm:mb-6">
+            <SiteLogo size="md" className="sm:[&_.logo-mark]:h-11 sm:[&_.logo-mark]:w-11 sm:[&_.logo-word]:text-[1.5rem]" />
           </div>
           <h1 className="type-display animate-fade-up max-w-3xl text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
             {Array.isArray(hero.headline) ? (
@@ -170,23 +170,31 @@ export async function LandingPageView({ file }: { file: LandingPageFile }) {
               hero.headline
             )}
           </h1>
-          <p className="type-title animate-fade-up mt-5 text-white/95">
+          <p className="type-title animate-fade-up mt-4 text-white/95 sm:mt-5">
             {hero.name}
           </p>
           <p className="type-label animate-fade-up mt-2 text-white/75">
             {siteConfig.specialty}
           </p>
-          <p className="type-body-lg animate-fade-up mt-6 max-w-xl text-white/90">
+          <p className="type-body-lg animate-fade-up mt-5 max-w-xl text-pretty text-white/90 sm:mt-6">
             {hero.support}
           </p>
           <div
-            className="animate-fade-up mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+            className="animate-fade-up mt-8 flex w-full flex-col gap-3 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center"
             style={{ animationDelay: "100ms" }}
           >
-            <ButtonLink href="/timebestilling" variant="primary">
+            <ButtonLink
+              href="/timebestilling"
+              variant="primary"
+              className="w-full sm:w-auto"
+            >
               {t("book")}
             </ButtonLink>
-            <ButtonLink href={siteConfig.phoneHref} variant="onDark">
+            <ButtonLink
+              href={siteConfig.phoneHref}
+              variant="onDark"
+              className="w-full sm:w-auto"
+            >
               {siteConfig.phone}
             </ButtonLink>
           </div>

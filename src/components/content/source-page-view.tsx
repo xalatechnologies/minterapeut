@@ -67,7 +67,7 @@ export async function EditorialPageView({ file }: EditorialPageViewProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0b1210]/88 via-[#0b1210]/50 to-[#0b1210]/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0b1210]/65 via-transparent to-[#0b1210]/20" />
-          <div className="container-site relative flex min-h-[42vh] flex-col justify-end pb-12 pt-28 sm:min-h-[48vh] sm:pb-16">
+          <div className="container-site relative flex min-h-[42vh] flex-col justify-end pb-10 pt-24 sm:min-h-[48vh] sm:pb-16 sm:pt-28">
             <p className="type-caption text-white/70">{siteConfig.brand}</p>
             <h1 className="type-headline mt-3 max-w-3xl text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.35)]">
               {pageTitle}

@@ -7,6 +7,7 @@ type ButtonLinkProps = {
   variant?: "primary" | "secondary" | "outline" | "book" | "onDark";
   className?: string;
   size?: "default" | "sm";
+  onClick?: () => void;
 };
 
 const styles = {
@@ -27,6 +28,7 @@ export function ButtonLink({
   variant = "primary",
   className,
   size = "default",
+  onClick,
 }: ButtonLinkProps) {
   const classNames = cn(
     "type-label inline-flex items-center justify-center rounded-full font-semibold tracking-wide transition",
@@ -41,14 +43,14 @@ export function ButtonLink({
     href.startsWith("#")
   ) {
     return (
-      <a href={href} className={classNames}>
+      <a href={href} className={classNames} onClick={onClick}>
         {children}
       </a>
     );
   }
 
   return (
-    <Link href={href as "/"} className={classNames}>
+    <Link href={href as "/"} className={classNames} onClick={onClick}>
       {children}
     </Link>
   );

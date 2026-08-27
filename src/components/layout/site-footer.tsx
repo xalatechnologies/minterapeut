@@ -86,12 +86,12 @@ export function SiteFooter() {
         <div className="flex flex-col gap-8 md:col-span-5 sm:flex-row sm:gap-12">
           <div className="flex flex-col gap-4">
             <h2 className="type-caption text-secondary">{t("links")}</h2>
-            <ul className="flex flex-col gap-2 type-body text-on-surface-variant">
+            <ul className="flex flex-col gap-0.5 type-body text-on-surface-variant">
               {primaryLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href as "/"}
-                    className="transition hover:text-sage-deep"
+                    className="block rounded-lg py-2.5 transition hover:text-sage-deep"
                   >
                     {navLabel(tItems, item.href, item.label)}
                   </Link>
@@ -102,12 +102,12 @@ export function SiteFooter() {
 
           <div className="flex flex-col gap-4">
             <h2 className="type-caption text-secondary">{tNav("more")}</h2>
-            <ul className="flex flex-col gap-2 type-body text-on-surface-variant">
+            <ul className="flex flex-col gap-0.5 type-body text-on-surface-variant">
               {infoLinks.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href as "/"}
-                    className="transition hover:text-sage-deep"
+                    className="block rounded-lg py-2.5 transition hover:text-sage-deep"
                   >
                     {navLabel(tItems, item.href, item.label)}
                   </Link>
@@ -139,7 +139,7 @@ export function SiteFooter() {
 
       <div className="border-t border-outline-variant/25">
         <div className="container-site flex flex-col gap-2 py-5 type-label font-normal tracking-normal text-secondary sm:flex-row sm:items-center sm:justify-between">
-          <p>
+          <p suppressHydrationWarning>
             © {new Date().getFullYear()} {siteConfig.therapistName}
             <span className="mx-2 text-outline-variant">·</span>
             {t("org")} {siteConfig.orgNumber}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useEffect, useId, useRef, useState } from "react";
 
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
@@ -26,12 +26,14 @@ export function SiteHeader() {
   const t = useTranslations("Nav");
   const tItems = useTranslations("Nav.items");
   const pathname = usePathname();
-  const locale = useLocale();
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
   const moreRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileNavRef = useRef<HTMLElement>(null);
   const moreButtonId = useId();
   const moreMenuId = useId();
+  const mobileNavId = useId();
 
   const primaryItems = navItems.filter((item) => PRIMARY_HREFS.has(item.href));
   const moreItems = navItems.filter((item) => MORE_HREFS.has(item.href));
@@ -64,16 +66,36 @@ export function SiteHeader() {
     };
   }, [moreOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [menuOpen]);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-outline-variant/25 bg-surface/90 backdrop-blur-md">
-      <div className="container-site flex h-[4.25rem] items-center justify-between gap-6">
+    <header className="sticky top-0 z-50 border-b border-outline-variant/25 bg-surface/95 backdrop-blur-md supports-[backdrop-filter]:bg-surface/90">
+      <div className="container-site flex h-14 items-center justify-between gap-3 sm:h-[4.25rem] sm:gap-6">
         <Link
           href="/"
-          className="shrink-0 text-sage-deep transition-opacity hover:opacity-80"
+          className="min-w-0 shrink text-sage-deep transition-opacity hover:opacity-80"
           onClick={() => setMenuOpen(false)}
           aria-label={siteConfig.brand}
         >
-          <SiteLogo size="md" />
+          <SiteLogo size="sm" className="sm:[&_.logo-mark]:h-9 sm:[&_.logo-mark]:w-9 sm:[&_.logo-word]:text-[1.35rem]" />
         </Link>
 
         <nav
@@ -193,7 +215,7 @@ export function SiteHeader() {
             })}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <div className="hidden sm:block">
             <LanguageSwitcher compact />
           </div>
@@ -201,15 +223,16 @@ export function SiteHeader() {
             href="/timebestilling"
             variant="book"
             size="sm"
-            className="shrink-0"
+            className="hidden min-[380px]:inline-flex shrink-0 px-3.5 sm:px-5"
           >
             {t("book")}
           </ButtonLink>
           <button
+            ref={menuButtonRef}
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg text-on-surface transition hover:bg-surface-variant lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-on-surface transition hover:bg-surface-variant active:bg-surface-container lg:hidden"
             aria-expanded={menuOpen}
-            aria-controls="mobile-nav"
+            aria-controls={mobileNavId}
             aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
             onClick={() => setMenuOpen((value) => !value)}
           >
@@ -218,69 +241,100 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <div
-        id="mobile-nav"
-        className={cn(
-          "max-h-[70vh] overflow-y-auto border-t border-outline-variant/30 bg-surface-container-lowest lg:hidden",
-          menuOpen ? "block" : "hidden",
-        )}
-      >
-        <div className="container-site flex flex-col py-3">
-          {primaryItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href as "/"}
-              className={cn(
-                "type-label rounded-lg px-3 py-3 transition",
-                isActivePath(pathname, item.href)
-                  ? "bg-surface-container text-sage-deep"
-                  : "text-on-surface-variant hover:bg-surface-container hover:text-sage-deep",
-              )}
-              onClick={() => setMenuOpen(false)}
-            >
-              {navLabel(tItems, item.href, item.label)}
-            </Link>
-          ))}
+      {/* Backdrop */}
+      {menuOpen ? (
+        <div
+          aria-hidden
+          className="fixed inset-0 top-14 z-40 bg-[#0b1210]/55 backdrop-blur-[2px] sm:top-[4.25rem] lg:hidden"
+          onClick={() => setMenuOpen(false)}
+        />
+      ) : null}
 
-          <p className="type-caption mt-3 px-3 text-secondary">{t("more")}</p>
-          {moreItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href as "/"}
-              className={cn(
-                "type-label rounded-lg px-3 py-3 transition",
-                isActivePath(pathname, item.href)
-                  ? "bg-surface-container text-sage-deep"
-                  : "text-on-surface-variant hover:bg-surface-container hover:text-sage-deep",
-              )}
-              onClick={() => setMenuOpen(false)}
-            >
-              {navLabel(tItems, item.href, item.label)}
-            </Link>
-          ))}
+      {/* Mobile panel */}
+      {menuOpen ? (
+        <nav
+          ref={mobileNavRef}
+          id={mobileNavId}
+          aria-label={t("main")}
+          className="absolute inset-x-0 top-full z-50 w-full max-h-[min(78dvh,36rem)] animate-fade-up overflow-y-auto overscroll-contain border-b border-outline-variant/25 bg-surface-container-lowest shadow-[var(--shadow-soft)] lg:hidden"
+          style={{ animationDuration: "280ms" }}
+        >
+          <div className="container-site flex flex-col gap-1 py-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+            {primaryItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href as "/"}
+                className={cn(
+                  "type-label rounded-xl px-3.5 py-3.5 transition active:scale-[0.99]",
+                  isActivePath(pathname, item.href)
+                    ? "bg-surface-container text-sage-deep"
+                    : "text-on-surface-variant hover:bg-surface-container hover:text-sage-deep",
+                )}
+                onClick={() => setMenuOpen(false)}
+              >
+                {navLabel(tItems, item.href, item.label)}
+              </Link>
+            ))}
 
-          <p className="type-caption mt-3 px-3 text-secondary">
-            {t("languages")}
-          </p>
-          {languageItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href as "/"}
-              className="type-label rounded-lg px-3 py-3 text-on-surface-variant transition hover:bg-surface-container hover:text-sage-deep"
-              onClick={() => setMenuOpen(false)}
-            >
-              {navLabel(tItems, item.href, item.label)}
-            </Link>
-          ))}
+            <div className="my-2 border-t border-outline-variant/25" />
 
-          <div className="mt-2 border-t border-outline-variant/30 pt-3 sm:hidden">
-            <p className="type-caption mb-2 px-3 text-secondary">
-              {t("language")} ({locale.toUpperCase()})
+            <p className="type-caption px-3.5 pb-1 pt-1 text-secondary">
+              {t("more")}
             </p>
-            <LanguageSwitcher className="px-3" />
+            {moreItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href as "/"}
+                className={cn(
+                  "type-label rounded-xl px-3.5 py-3.5 transition active:scale-[0.99]",
+                  isActivePath(pathname, item.href)
+                    ? "bg-surface-container text-sage-deep"
+                    : "text-on-surface-variant hover:bg-surface-container hover:text-sage-deep",
+                )}
+                onClick={() => setMenuOpen(false)}
+              >
+                {navLabel(tItems, item.href, item.label)}
+              </Link>
+            ))}
+
+            <div className="my-2 border-t border-outline-variant/25" />
+
+            <p className="type-caption px-3.5 pb-1 pt-1 text-secondary">
+              {t("languages")}
+            </p>
+            <div className="flex flex-wrap gap-2 px-2 pb-2">
+              {languageItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href as "/"}
+                  className="type-label rounded-full border border-outline-variant/35 px-4 py-2.5 text-on-surface-variant transition hover:border-sage-deep hover:text-sage-deep active:scale-[0.98]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {navLabel(tItems, item.href, item.label)}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-2 border-t border-outline-variant/25 px-2 pt-4 sm:hidden">
+              <p className="type-caption mb-2 px-1.5 text-secondary">
+                {t("language")}
+              </p>
+              <LanguageSwitcher className="w-full [&_select]:w-full" />
+            </div>
+
+            <div className="mt-4 px-2 min-[380px]:hidden">
+              <ButtonLink
+                href="/timebestilling"
+                variant="book"
+                className="w-full"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t("book")}
+              </ButtonLink>
+            </div>
           </div>
-        </div>
-      </div>
+        </nav>
+      ) : null}
     </header>
   );
 }

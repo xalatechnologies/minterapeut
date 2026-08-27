@@ -33,11 +33,11 @@ export function SiteLogo({
         className,
       )}
     >
-      <LogoMark className={cn("shrink-0", s.mark)} />
+      <LogoMark className={cn("logo-mark shrink-0", s.mark)} />
       {markOnly ? null : (
         <span
           className={cn(
-            "font-serif font-semibold tracking-tight leading-none",
+            "logo-word font-serif font-semibold tracking-tight leading-none",
             s.text,
           )}
         >
