@@ -1,0 +1,59 @@
+{
+  "Metadata": {
+    "title": "Min terapeut",
+    "description": "Privat terapeuttjeneste i Sandvika i Bærum."
+  },
+  "Common": {
+    "brand": "Min terapeut",
+    "skipToContent": "Hopp til innhold",
+    "home": "Velkommen"
+  },
+  "Nav": {
+    "main": "Hovednavigasjon",
+    "contact": "Kontakt",
+    "book": "Bestill time",
+    "more": "Informasjon",
+    "languages": "Terapi på andre språk",
+    "openMenu": "Åpne meny",
+    "closeMenu": "Lukk meny",
+    "language": "Språk",
+    "items": {
+      "home": "Hjem",
+      "therapy": "Om terapi",
+      "whenHelp": "Når søke hjelp",
+      "seeingPsychologist": "Å gå til psykolog",
+      "appointments": "Timeavtaler",
+      "publicCare": "Offentlig behandling",
+      "about": "Om meg",
+      "english": "English",
+      "deutsch": "Deutsch",
+      "francais": "Français"
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Språk",
+    "en": "English",
+    "no": "Norsk",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "Footer": {
+    "contact": "Kontakt",
+    "links": "Meny",
+    "postal": "Postadresse",
+    "org": "Org.nr.",
+    "phone": "Telefon",
+    "clinic": "Klinikk",
+    "email": "E-post",
+    "languages": "Språk"
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "call": "Ring"
+  },
+  "NotFound": {
+    "title": "Siden ble ikke funnet",
+    "body": "Siden du leter etter finnes ikke, eller er flyttet.",
+    "home": "Til forsiden"
+  }
+}

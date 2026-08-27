@@ -1,0 +1,59 @@
+{
+  "Metadata": {
+    "title": "Min terapeut",
+    "description": "Private therapy service in Sandvika, Bærum."
+  },
+  "Common": {
+    "brand": "Min terapeut",
+    "skipToContent": "Skip to content",
+    "home": "Welcome"
+  },
+  "Nav": {
+    "main": "Main navigation",
+    "contact": "Contact",
+    "book": "Book a session",
+    "more": "Information",
+    "languages": "Therapy in other languages",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "items": {
+      "home": "Home",
+      "therapy": "About therapy",
+      "whenHelp": "When to seek help",
+      "seeingPsychologist": "Seeing a psychologist",
+      "appointments": "Appointments",
+      "publicCare": "Public care",
+      "about": "About me",
+      "english": "English",
+      "deutsch": "Deutsch",
+      "francais": "Français"
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "no": "Norsk",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "links": "Menu",
+    "postal": "Postal address",
+    "org": "Org. no.",
+    "phone": "Phone",
+    "clinic": "Clinic",
+    "email": "Email",
+    "languages": "Languages"
+  },
+  "Contact": {
+    "title": "Contact",
+    "call": "Call"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "body": "The page you are looking for does not exist or has moved.",
+    "home": "Back to home"
+  }
+}

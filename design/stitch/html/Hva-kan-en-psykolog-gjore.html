@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="no"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hva kan en psykolog gjøre? - Min Psykolog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-background": "#181c1e",
+                        "background": "#f7fafc",
+                        "primary-fixed-dim": "#9fd1c1",
+                        "surface-container": "#ebeef0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f7fafc",
+                        "surface-dim": "#d7dadd",
+                        "tertiary-fixed": "#d4e6e8",
+                        "on-primary-fixed-variant": "#1f4f43",
+                        "secondary": "#496366",
+                        "on-tertiary-fixed-variant": "#394a4b",
+                        "accent-yellow": "#FFD640",
+                        "surface-variant": "#e0e3e5",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-container": "#4f696c",
+                        "surface-tint": "#38675b",
+                        "on-secondary-fixed": "#031f22",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#9fd1c1",
+                        "secondary-container": "#cbe8eb",
+                        "tertiary-fixed-dim": "#b8cacc",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-container": "#68797b",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#507f72",
+                        "warm-grey-bg": "#F5F5F4",
+                        "outline": "#707975",
+                        "on-surface": "#181c1e",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c0c8c4",
+                        "on-primary-fixed": "#002019",
+                        "sage-deep": "#375C5F",
+                        "surface": "#f7fafc",
+                        "on-tertiary-fixed": "#0e1e20",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e5e8eb",
+                        "primary-fixed": "#bbeddd",
+                        "inverse-on-surface": "#eef1f3",
+                        "surface-container-low": "#f1f4f6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#506062",
+                        "primary": "#37665a",
+                        "on-primary-container": "#ffffff",
+                        "secondary-fixed-dim": "#b0cccf",
+                        "on-tertiary-container": "#feffff",
+                        "on-surface-variant": "#404945",
+                        "secondary-fixed": "#cbe8eb",
+                        "on-secondary-fixed-variant": "#314b4e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "content-gap": "24px",
+                        "section-gap": "80px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "20px",
+                        "max-width": "1140px",
+                        "margin-desktop": "auto"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["\"Source Serif 4\""],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-warm-grey-bg text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-on-background/90 backdrop-blur-md text-primary dark:text-primary-fixed-dim font-label-md text-label-md docked full-width top-0 sticky shadow-sm z-50 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto h-20">
+<a class="font-display-lg text-headline-md font-semibold text-sage-deep dark:text-primary-fixed tracking-tight" href="#">Min Psykolog</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-300 hover:opacity-80 scale-95" href="#">Hva kan en psykolog gjøre?</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Timeavtaler</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">Om meg</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:inline-flex items-center justify-center bg-transparent border-2 border-primary text-primary px-6 py-2 rounded-full hover:bg-primary/5 transition-colors font-label-md text-label-md">
+                    Kontakt
+                </button>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-primary group-hover:text-sage-deep" data-icon="language">language</span>
+</button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto py-section-gap">
+<!-- Hero Section -->
+<header class="mb-section-gap text-center md:text-left max-w-3xl">
+<h1 class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-sage-deep mb-content-gap">Hva kan en psykolog gjøre for meg?</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                Å søke hjelp kan føles overveldende. En psykolog tilbyr et trygt, konfidensielt rom for å utforske tankene, følelsene og utfordringene dine. Enten du står i en akutt krise eller ønsker å forstå mønstre i livet ditt, tilpasses behandlingen dine unike behov.
+            </p>
+</header>
+<!-- Asymmetric Content Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-section-gap">
+<!-- Left Column: Image & Contact Anchor -->
+<div class="lg:col-span-5 flex flex-col gap-content-gap">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden border border-outline-variant/30 shadow-sm">
+<img alt="" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa6yb8onRSHrC4L3Pka1LykkZo1c2zjoQeLB2Ngx42nNU0O5cDwRL1PPUQZc-enefcttbS7BVK_gD3PwmWHt8_5xZroBwT74PBs77dBMrX0yBMn2kvICK4qIRD_VJkAawOnIRdA8yMBx4J_QQeS6bUa1cu_rvtmvAcJORegzAI1dyVorCEWkdgHWGOVU_M0_IzE-jXXVu_N5D3HclJ09V5YT9fJ81Ox2IyzKZ3qsajTK9hK_G1ELbHAQa5PenUkAjoqA"/>
+</div>
+<!-- Contact Block Container -->
+<div class="bg-tertiary-fixed/30 rounded-xl p-8 mt-content-gap flex flex-col gap-6 shadow-[0_4px_20px_rgba(74,78,80,0.06)]">
+<h3 class="font-headline-md text-headline-md text-sage-deep">Klar for en prat?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bestill en timeavtale i dag for å ta det første skrittet.</p>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-sage-deep transition-colors shadow-sm self-start">
+                        Bestill Timeavtale
+                    </button>
+</div>
+</div>
+<!-- Right Column: Details Content (Bento/Card-like structure) -->
+<div class="lg:col-span-7 flex flex-col gap-content-gap">
+<section class="bg-surface rounded-xl p-8 shadow-[0_4px_20px_rgba(74,78,80,0.06)] border border-surface-variant">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl mt-1" data-icon="healing">healing</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-sage-deep mb-3">Kriser og akutte situasjoner</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                I møte med plutselige tap, traumer eller dype kriser, fungerer psykologen som en stabil støtte. Målet er å gjenopprette en følelse av trygghet og kontroll, og gi verktøy for å håndtere overveldende følelser her og nå.
+                            </p>
+</div>
+</div>
+</section>
+<section class="bg-surface rounded-xl p-8 shadow-[0_4px_20px_rgba(74,78,80,0.06)] border border-surface-variant">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl mt-1" data-icon="forum">forum</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-sage-deep mb-3">Samtalebehandling</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                Gjennom strukturert og utforskende samtale jobber vi sammen for å identifisere fastlåste mønstre. Samtalebehandling kan rettes mot spesifikke diagnoser som angst og depresjon, eller mer generelle relasjonelle vansker og livskvalitet.
+                            </p>
+</div>
+</div>
+</section>
+<section class="bg-surface rounded-xl p-8 shadow-[0_4px_20px_rgba(74,78,80,0.06)] border border-surface-variant">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl mt-1" data-icon="hourglass_empty">hourglass_empty</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-sage-deep mb-3">Tidsperspektiv</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                Terapi er en prosess. Noen opplever bedring etter få timer, mens andre har behov for et lengre forløp. Vi evaluerer jevnlig underveis for å sikre at behandlingen gir mening for deg og leder mot dine mål.
+                            </p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-content-gap">
+<section class="bg-surface-container-low rounded-xl p-6 border border-surface-variant">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="lock">lock</span> Taushetsplikt
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Alt vi snakker om er underlagt streng taushetsplikt. Dette er fundamentet for tillit og en forutsetning for at terapirommet skal være et trygt sted.
+                        </p>
+</section>
+<section class="bg-surface-container-low rounded-xl p-6 border border-surface-variant">
+<h3 class="font-label-md text-label-md text-primary uppercase tracking-wider mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="description">description</span> Journalføring
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Som helsepersonell er jeg pliktig til å føre journal. Dette sikrer kontinuitet og kvalitet i behandlingen, og behandles etter gjeldende personvernregler.
+                        </p>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface text-secondary dark:text-secondary-fixed-dim font-body-md text-body-md full-width flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-section-gap px-margin-mobile md:px-margin-desktop py-section-gap max-w-max-width mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-display-lg text-headline-md text-sage-deep dark:text-primary-fixed">Min Psykolog</span>
+<p class="text-sm opacity-80 mt-2 max-w-xs">© 2024 Harald Bull-Hanssen | Spesialist i klinisk voksenpsykologi | Medlem av Norsk Psykologforening</p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed-dim hover:underline transition-all focus:ring-2 focus:ring-secondary-container rounded px-1 -mx-1" href="#">Sandvika, Norge</a>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed-dim hover:underline transition-all focus:ring-2 focus:ring-secondary-container rounded px-1 -mx-1" href="#">+47 000 00 000</a>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed-dim hover:underline transition-all focus:ring-2 focus:ring-secondary-container rounded px-1 -mx-1" href="#">post@minpsykolog.no</a>
+<span class="text-on-surface-variant dark:text-surface-dim mt-2 opacity-75">Org: 123 456 789</span>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-sage-deep mb-2">Nyttige lenker</h4>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed-dim hover:underline transition-all focus:ring-2 focus:ring-secondary-container rounded px-1 -mx-1" href="#">Helsenorge</a>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed-dim hover:underline transition-all focus:ring-2 focus:ring-secondary-container rounded px-1 -mx-1" href="#">Mental Helse</a>
+</div>
+</div>
+</footer>
+</body></html>

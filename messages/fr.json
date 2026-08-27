@@ -1,0 +1,59 @@
+{
+  "Metadata": {
+    "title": "Min terapeut",
+    "description": "Cabinet de thérapie privé à Sandvika, Bærum."
+  },
+  "Common": {
+    "brand": "Min terapeut",
+    "skipToContent": "Aller au contenu",
+    "home": "Bienvenue"
+  },
+  "Nav": {
+    "main": "Navigation principale",
+    "contact": "Contact",
+    "book": "Rendez-vous",
+    "more": "Informations",
+    "languages": "Thérapie dans d'autres langues",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "items": {
+      "home": "Accueil",
+      "therapy": "Thérapie",
+      "whenHelp": "Quand chercher de l'aide",
+      "seeingPsychologist": "Consulter un psychologue",
+      "appointments": "Séances",
+      "publicCare": "Soins publics",
+      "about": "À propos",
+      "english": "English",
+      "deutsch": "Deutsch",
+      "francais": "Français"
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Langue",
+    "en": "English",
+    "no": "Norsk",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "Footer": {
+    "contact": "Contact",
+    "links": "Menu",
+    "postal": "Adresse postale",
+    "org": "N° d'org.",
+    "phone": "Téléphone",
+    "clinic": "Cabinet",
+    "email": "E-mail",
+    "languages": "Langues"
+  },
+  "Contact": {
+    "title": "Contact",
+    "call": "Appeler"
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "body": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "home": "Retour à l'accueil"
+  }
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="no"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Timeavtaler og priser - Min Psykolog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "on-background": "#181c1e",
+                      "background": "#f7fafc",
+                      "primary-fixed-dim": "#9fd1c1",
+                      "surface-container": "#ebeef0",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#f7fafc",
+                      "surface-dim": "#d7dadd",
+                      "tertiary-fixed": "#d4e6e8",
+                      "on-primary-fixed-variant": "#1f4f43",
+                      "secondary": "#496366",
+                      "on-tertiary-fixed-variant": "#394a4b",
+                      "accent-yellow": "#FFD640",
+                      "surface-variant": "#e0e3e5",
+                      "inverse-surface": "#2d3133",
+                      "on-secondary-container": "#4f696c",
+                      "surface-tint": "#38675b",
+                      "on-secondary-fixed": "#031f22",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#9fd1c1",
+                      "secondary-container": "#cbe8eb",
+                      "tertiary-fixed-dim": "#b8cacc",
+                      "surface-container-highest": "#e0e3e5",
+                      "tertiary-container": "#68797b",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#507f72",
+                      "warm-grey-bg": "#F5F5F4",
+                      "outline": "#707975",
+                      "on-surface": "#181c1e",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#c0c8c4",
+                      "on-primary-fixed": "#002019",
+                      "sage-deep": "#375C5F",
+                      "surface": "#f7fafc",
+                      "on-tertiary-fixed": "#0e1e20",
+                      "on-error": "#ffffff",
+                      "surface-container-high": "#e5e8eb",
+                      "primary-fixed": "#bbeddd",
+                      "inverse-on-surface": "#eef1f3",
+                      "surface-container-low": "#f1f4f6",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#506062",
+                      "primary": "#37665a",
+                      "on-primary-container": "#ffffff",
+                      "secondary-fixed-dim": "#b0cccf",
+                      "on-tertiary-container": "#feffff",
+                      "on-surface-variant": "#404945",
+                      "secondary-fixed": "#cbe8eb",
+                      "on-secondary-fixed-variant": "#314b4e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "content-gap": "24px",
+                      "section-gap": "80px",
+                      "base": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "20px",
+                      "max-width": "1140px",
+                      "margin-desktop": "auto"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "\"Source Serif 4\""
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "\"Source Serif 4\""
+                      ],
+                      "headline-lg": [
+                              "\"Source Serif 4\""
+                      ],
+                      "headline-md": [
+                              "\"Source Serif 4\""
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-on-background/90 backdrop-blur-md text-primary dark:text-primary-fixed-dim font-label-md text-label-md full-width top-0 sticky border-b border-outline-variant/30 shadow-sm z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto h-20">
+<a class="font-display-lg text-headline-md font-semibold text-sage-deep dark:text-primary-fixed hover:opacity-80 transition-opacity" href="#">
+                Min Psykolog
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">
+                    Hva kan en psykolog gjøre?
+                </a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">
+                    Timeavtaler
+                </a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#">
+                    Om meg
+                </a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="hidden md:flex items-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<a class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md hover:bg-primary transition-colors duration-300 hidden md:block" href="#kontakt">
+                    Kontakt
+                </a>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-content-gap items-center">
+<div class="space-y-6 pr-0 lg:pr-12">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">
+                        Timeavtaler og priser
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        {{DATA:DOCUMENT:DOCUMENT_5}} 
+                        Vi tilbyr fleksible tider og enkle løsninger for bestilling av terapi. Ta det første skrittet mot bedre mental helse i dag.
+                    </p>
+<div class="pt-4">
+<a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-full font-label-md hover:bg-sage-deep transition-colors duration-300 shadow-[0_4px_20px_rgba(74,78,80,0.06)]" href="#kontakt">
+                            Bestill time
+                        </a>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-[4/3] rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(74,78,80,0.06)] border border-outline-variant/20">
+<img alt="Person som snakker i telefonen for å bestille time" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpZjAzTnj_Ow_XbKlkMMrOhIa4e9Ys0DXbso_fe76V3Vwv6UkMrOQpp4xDhCm6kcnnBzI8yaSznp8m2IH8hyoDpnvoonec7ylUprqdxzLGx3A-xhulr-1iiv01xYgsVpFJZGzTTxmaNEdwfX56dwfQg-MP18K3YxK5jLtRyuqqEIg_fM_NNTqZaG9YDAHJVG-j_BJ0PGthT0I_zPx6KD_pAQYOIuYSTCiLX5PljQ9ng_EFPS61NrXwfHMGvOSHjj2FHw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing & Contact Section (Bento Grid Style) -->
+<section class="bg-warm-grey-bg py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-max-width mx-auto">
+<div class="mb-12 text-center">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Priser og praktisk informasjon</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Klar og transparent prising for våre tjenester, samt informasjon om hvor du finner oss.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Pricing Card -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(74,78,80,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Priser</h3>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="font-body-lg text-on-background">Individuell terapi (45 min)</span>
+<span class="font-headline-md text-primary font-semibold">1200 kr</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="font-body-lg text-on-background">Parterapi (60 min)</span>
+<span class="font-headline-md text-primary font-semibold">1500 kr</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mt-6 text-sm">
+                                Avbestilling må skje senest 24 timer før avtalt tid. Ved for sen avbestilling eller uteblivelse faktureres timen i sin helhet.
+                            </p>
+</div>
+</div>
+<!-- Contact/Booking Card -->
+<div class="bg-secondary-container rounded-xl p-8 shadow-[0_4px_20px_rgba(74,78,80,0.06)] flex flex-col justify-center" id="kontakt">
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-sage-deep text-3xl">calendar_month</span>
+<h3 class="font-headline-md text-headline-md text-on-secondary-container">Bestill time</h3>
+</div>
+<p class="font-body-md text-on-secondary-container mb-6">
+                            For å bestille time, ta kontakt via telefon eller e-post. Vi svarer vanligvis innen en virkedag.
+                        </p>
+<div class="space-y-4">
+<a class="flex items-center space-x-3 text-sage-deep hover:text-primary transition-colors group" href="tel:+4700000000">
+<div class="bg-surface-container-lowest p-2 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="font-body-lg">+47 000 00 000</span>
+</a>
+<a class="flex items-center space-x-3 text-sage-deep hover:text-primary transition-colors group" href="mailto:post@minpsykolog.no">
+<div class="bg-surface-container-lowest p-2 rounded-full group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="font-body-lg">post@minpsykolog.no</span>
+</a>
+</div>
+</div>
+<!-- Location Card -->
+<div class="md:col-span-3 bg-surface-container-lowest rounded-xl p-8 shadow-[0_4px_20px_rgba(74,78,80,0.06)]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Finn frem</h3>
+</div>
+<div class="space-y-4 font-body-md text-on-surface-variant">
+<p class="font-body-lg font-medium text-on-background">Anthon Walles vei 36, Sandvika</p>
+<p>
+                                        Kontoret ligger sentralt i Sandvika med kort gangavstand fra buss og togstasjon. 
+                                    </p>
+<div class="flex items-start space-x-2 mt-4">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">directions_car</span>
+<p><strong>Parkering:</strong> Det er gode parkeringsmuligheter rett utenfor bygget (mot avgift).</p>
+</div>
+<div class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-secondary text-sm mt-1">directions_transit</span>
+<p><strong>Kollektivt:</strong> Ca. 5 minutters gange fra Sandvika Stasjon.</p>
+</div>
+</div>
+</div>
+<div class="h-64 rounded-lg overflow-hidden border border-outline-variant/20 bg-surface-container-low flex items-center justify-center relative">
+<img class="w-full h-full object-cover absolute inset-0 z-0" data-alt="A highly detailed map view of Sandvika, Norway, specifically focusing on the area around Anthon Walles vei. The map style is clean, modern, and minimalist, using a subtle color palette of warm greys, soft greens, and light blues. The location is marked with a clear, professional pin. The lighting suggests a clear daytime view." data-location="Sandvika" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHYsT-8faqdgho0y--Z6cnRj3MxJ8HPgV1wwR-hYdW8wyWaFxnl-Jmbq_bQQbDmJFGnzQ6sjRK65zaE4KWemAlnVSPP9hbetW831qC4gwf5IU8H2ctR-wSF3pISAqyxi70_iNerFgudAVEK5qRDTZf8OCQSOoLrOUNTXXdvSvE2kCqAlpA1dKeOdJPXhn3dYPX8sFC-jAsfflg_cnmxXsybSIxI3XQk-uZLjBAUiBgbckPZWS_A5s0"/>
+<div class="relative z-10 bg-surface/80 backdrop-blur p-4 rounded-lg text-center hidden">
+                                    Map Integration Placeholder
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface text-secondary dark:text-secondary-fixed-dim font-body-md text-body-md full-width flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-section-gap px-margin-mobile md:px-margin-desktop py-section-gap max-w-max-width mx-auto">
+<!-- Column 1: Brand & Copyright -->
+<div class="space-y-4">
+<h2 class="font-display-lg text-headline-md text-sage-deep dark:text-primary-fixed">Min Psykolog</h2>
+<p class="text-on-surface-variant dark:text-surface-dim mt-4">
+                    © 2024 Harald Bull-Hanssen | Spesialist i klinisk voksenpsykologi | Medlem av Norsk Psykologforening
+                </p>
+</div>
+<!-- Column 2: Contact Info -->
+<div class="space-y-4">
+<h3 class="font-headline-md text-on-surface font-semibold mb-2">Kontakt</h3>
+<ul class="space-y-2 text-on-surface-variant dark:text-surface-dim">
+<li>Sandvika, Norge</li>
+<li>+47 000 00 000</li>
+<li>post@minpsykolog.no</li>
+<li>Org: 123 456 789</li>
+</ul>
+</div>
+<!-- Column 3: Useful Links -->
+<div class="space-y-4">
+<h3 class="font-headline-md text-on-surface font-semibold mb-2">Lenker</h3>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all focus:ring-2 focus:ring-secondary-container rounded" href="#">Helsenorge</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all focus:ring-2 focus:ring-secondary-container rounded" href="#">Mental Helse</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
