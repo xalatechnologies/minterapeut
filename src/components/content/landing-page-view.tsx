@@ -96,25 +96,6 @@ function AccentImage({
   );
 }
 
-function ClinicCaption({
-  line1,
-  line2,
-  line3,
-}: {
-  line1: string;
-  line2: string;
-  line3: string;
-}) {
-  return (
-    <>
-      <p className="type-caption text-secondary">{line1}</p>
-      <p className="type-label mt-1.5 text-on-surface-variant">
-        {line2}, {line3}
-      </p>
-    </>
-  );
-}
-
 export async function LandingPageView() {
   const locale = await getLocale();
   const tNav = await getTranslations("Nav");
@@ -200,13 +181,6 @@ export async function LandingPageView() {
                 src={visuals.accent}
                 position={visuals.accentPosition}
               />
-              <div className="mt-5">
-                <ClinicCaption
-                  line1={tSite("clinicLine1")}
-                  line2={siteConfig.clinicLine2}
-                  line3={siteConfig.clinicLine3}
-                />
-              </div>
             </aside>
           </div>
         </section>
