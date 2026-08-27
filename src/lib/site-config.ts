@@ -1,7 +1,7 @@
 export const siteConfig = {
   brand: "Min terapeut",
   therapistName: "Harald Bull-Hanssen",
-  specialty: "Spesialist i klinisk voksenpsykologi",
+  specialty: "Psykoterapeut",
   phone: "92 29 92 98",
   phoneHref: "tel:+4792299298",
   email: "haraldbullhanssen@yahoo.com",
