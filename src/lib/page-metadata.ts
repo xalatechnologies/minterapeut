@@ -8,7 +8,7 @@ export async function sourcePageMetadata(
   file: SourcePageFile,
 ) {
   const t = await getTranslations({ locale, namespace: "Metadata" });
-  const page = getSourcePage(file);
+  const page = getSourcePage(file, locale);
   const { title } = extractH1(page.content);
   const pageTitle = title || page.heading;
 

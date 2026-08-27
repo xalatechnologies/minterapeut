@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getLocale, getTranslations } from "next-intl/server";
 
 import { SourceMarkdown } from "@/components/content/source-markdown";
 import {
@@ -28,13 +29,20 @@ function isCrisisSection(markdown: string) {
   const first = markdown.split("\n")[0]?.toLowerCase() ?? "";
   return (
     first.includes("selvmord") ||
+    first.includes("suicid") ||
     first.includes("akut") ||
-    first.includes("krise")
+    first.includes("urgent") ||
+    first.includes("krise") ||
+    first.includes("crisis") ||
+    first.includes("crise") ||
+    first.includes("notfall")
   );
 }
 
 export async function EditorialPageView({ file }: EditorialPageViewProps) {
-  const page = getSourcePage(file);
+  const locale = await getLocale();
+  const tSite = await getTranslations("Site");
+  const page = getSourcePage(file, locale);
   const { title, body } = extractH1(page.content);
   const sections = splitAtHeadings(body);
   const contentSections = sections.filter((s) => s.kind !== "contact");
@@ -52,6 +60,7 @@ export async function EditorialPageView({ file }: EditorialPageViewProps) {
   const showSideImage =
     Boolean(imageSrc) && !useMediaHero && !SHORT_PAGES.has(file);
   const pageTitle = title || page.heading;
+  const specialty = tSite("specialty");
 
   return (
     <div className="flex flex-1 flex-col">
@@ -83,7 +92,7 @@ export async function EditorialPageView({ file }: EditorialPageViewProps) {
             </h1>
             {isPortrait ? (
               <p className="type-label mt-3 text-on-surface-variant">
-                {siteConfig.specialty}
+                {specialty}
               </p>
             ) : null}
           </div>
@@ -149,7 +158,7 @@ export async function EditorialPageView({ file }: EditorialPageViewProps) {
                           {siteConfig.therapistName}
                         </p>
                         <p className="type-label mt-1.5 text-on-surface-variant">
-                          {siteConfig.specialty}
+                          {specialty}
                         </p>
                       </figcaption>
                     ) : null}

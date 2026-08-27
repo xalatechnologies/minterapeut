@@ -1,12 +1,10 @@
 export const siteConfig = {
   brand: "Min terapeut",
   therapistName: "Harald Bull-Hanssen",
-  specialty: "Psykoterapeut",
   phone: "92 29 92 98",
   phoneHref: "tel:+4792299298",
   email: "haraldbullhanssen@yahoo.com",
   emailHref: "mailto:haraldbullhanssen@yahoo.com",
-  clinicLine1: "Ved Tinghuset i Sandvika",
   clinicLine2: "Anthon Walles vei 36",
   clinicLine3: "1337 Sandvika",
   postalName: "Min terapeut – Harald Bull-Hanssen",

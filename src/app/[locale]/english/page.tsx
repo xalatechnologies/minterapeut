@@ -1,17 +1,12 @@
 import { setRequestLocale } from "next-intl/server";
 
-import { LandingPageView } from "@/components/content/landing-page-view";
-import { sourcePageMetadata } from "@/lib/page-metadata";
+import { redirect } from "@/i18n/navigation";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({ params }: Props) {
-  const { locale } = await params;
-  return sourcePageMetadata(locale, "english.htm");
-}
-
+/** Legacy therapy-language URL → English locale home */
 export default async function Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <LandingPageView file="english.htm" />;
+  redirect({ href: "/", locale: "en" });
 }

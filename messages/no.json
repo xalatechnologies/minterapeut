@@ -8,6 +8,15 @@
     "skipToContent": "Hopp til innhold",
     "home": "Velkommen"
   },
+  "Site": {
+    "specialty": "Psykoterapeut",
+    "clinicLine1": "Ved Tinghuset i Sandvika"
+  },
+  "Home": {
+    "headlineLine1": "Velkommen til",
+    "headlineLine2": "Min terapeut",
+    "support": "Du er velkommen til å ta kontakt hvis du føler at du har det vanskelig psykisk og ønsker å gjøre noe med det."
+  },
   "Nav": {
     "main": "Hovednavigasjon",
     "contact": "Kontakt",
@@ -45,7 +54,8 @@
     "phone": "Telefon",
     "clinic": "Klinikk",
     "email": "E-post",
-    "languages": "Språk"
+    "languages": "Språk",
+    "partner": "Utviklet av"
   },
   "Contact": {
     "title": "Kontakt",

@@ -15,7 +15,6 @@ import { cn } from "@/lib/utils";
 
 const PRIMARY_HREFS = new Set(["/", "/hva", "/timebestilling", "/hvem"]);
 const MORE_HREFS = new Set(["/vurdering", "/nederlag", "/offentlig"]);
-const LANGUAGE_HREFS = new Set(["/english", "/deutsch", "/francais"]);
 
 function isActivePath(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -37,7 +36,6 @@ export function SiteHeader() {
 
   const primaryItems = navItems.filter((item) => PRIMARY_HREFS.has(item.href));
   const moreItems = navItems.filter((item) => MORE_HREFS.has(item.href));
-  const languageItems = navItems.filter((item) => LANGUAGE_HREFS.has(item.href));
   const moreActive = moreItems.some((item) => isActivePath(pathname, item.href));
 
   useEffect(() => {
@@ -299,23 +297,7 @@ export function SiteHeader() {
 
             <div className="my-2 border-t border-outline-variant/25" />
 
-            <p className="type-caption px-3.5 pb-1 pt-1 text-secondary">
-              {t("languages")}
-            </p>
-            <div className="flex flex-wrap gap-2 px-2 pb-2">
-              {languageItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href as "/"}
-                  className="type-label rounded-full border border-outline-variant/35 px-4 py-2.5 text-on-surface-variant transition hover:border-sage-deep hover:text-sage-deep active:scale-[0.98]"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {navLabel(tItems, item.href, item.label)}
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-2 border-t border-outline-variant/25 px-2 pt-4 sm:hidden">
+            <div className="px-2 pt-2">
               <p className="type-caption mb-2 px-1.5 text-secondary">
                 {t("language")}
               </p>

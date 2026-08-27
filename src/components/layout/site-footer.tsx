@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 import { SiteLogo } from "@/components/layout/site-logo";
 import { navItems } from "@/content";
@@ -10,24 +10,14 @@ import { siteConfig } from "@/lib/site-config";
 
 const PRIMARY_HREFS = new Set(["/", "/hva", "/timebestilling", "/hvem"]);
 const INFO_HREFS = new Set(["/vurdering", "/nederlag", "/offentlig"]);
-const LANGUAGE_HREFS = new Set(["/english", "/deutsch", "/francais"]);
 
 export function SiteFooter() {
   const t = useTranslations("Footer");
   const tNav = useTranslations("Nav");
   const tItems = useTranslations("Nav.items");
-  const locale = useLocale();
+  const tSite = useTranslations("Site");
   const primaryLinks = navItems.filter((item) => PRIMARY_HREFS.has(item.href));
   const infoLinks = navItems.filter((item) => INFO_HREFS.has(item.href));
-  const languageLinks = navItems.filter((item) => LANGUAGE_HREFS.has(item.href));
-
-  // Quiet language entry: hide the page that matches current locale home.
-  const visibleLanguageLinks = languageLinks.filter((item) => {
-    if (locale === "en" && item.href === "/english") return false;
-    if (locale === "de" && item.href === "/deutsch") return false;
-    if (locale === "fr" && item.href === "/francais") return false;
-    return true;
-  });
 
   return (
     <footer className="mt-auto border-t border-outline-variant/25 bg-surface-container-low">
@@ -44,10 +34,10 @@ export function SiteFooter() {
             {siteConfig.therapistName}
           </p>
           <p className="type-label max-w-sm text-secondary">
-            {siteConfig.specialty}
+            {tSite("specialty")}
           </p>
           <p className="type-label mt-3 max-w-xs text-secondary">
-            {siteConfig.clinicLine1}
+            {tSite("clinicLine1")}
             <br />
             {siteConfig.clinicLine2}, {siteConfig.clinicLine3}
           </p>
@@ -114,25 +104,6 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
-            {visibleLanguageLinks.length > 0 ? (
-              <>
-                <p className="type-caption mt-2 text-secondary">
-                  {tNav("languages")}
-                </p>
-                <ul className="flex flex-wrap gap-x-4 gap-y-1 type-label text-secondary">
-                  {visibleLanguageLinks.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href as "/"}
-                        className="transition hover:text-sage-deep"
-                      >
-                        {navLabel(tItems, item.href, item.label)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : null}
           </div>
         </div>
       </div>
@@ -145,7 +116,15 @@ export function SiteFooter() {
             {t("org")} {siteConfig.orgNumber}
           </p>
           <p>
-            {t("postal")}: {siteConfig.postalStreet}, {siteConfig.postalCity}
+            {t("partner")}{" "}
+            <a
+              href="https://xala.no"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-sage-deep"
+            >
+              Xala technologies
+            </a>
           </p>
         </div>
       </div>

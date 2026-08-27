@@ -8,6 +8,15 @@
     "skipToContent": "Skip to content",
     "home": "Welcome"
   },
+  "Site": {
+    "specialty": "Psychotherapist",
+    "clinicLine1": "At Tinghuset in Sandvika"
+  },
+  "Home": {
+    "headlineLine1": "Welcome to",
+    "headlineLine2": "Min terapeut",
+    "support": "You are welcome to get in touch if you are struggling psychologically and want to do something about it."
+  },
   "Nav": {
     "main": "Main navigation",
     "contact": "Contact",
@@ -45,7 +54,8 @@
     "phone": "Phone",
     "clinic": "Clinic",
     "email": "Email",
-    "languages": "Languages"
+    "languages": "Languages",
+    "partner": "Developed by"
   },
   "Contact": {
     "title": "Contact",

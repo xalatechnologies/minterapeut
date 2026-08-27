@@ -1,13 +1,11 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import type { ReactNode } from "react";
 
 import { SourceMarkdown } from "@/components/content/source-markdown";
 import { SiteLogo } from "@/components/layout/site-logo";
 import { ButtonLink } from "@/components/ui/button-link";
-import {
-  getSourcePage,
-  type SourcePageFile,
-} from "@/content";
+import { getSourcePage, homePageForLocale } from "@/content";
 import {
   extractH1,
   splitAtHeadings,
@@ -15,13 +13,8 @@ import {
 } from "@/lib/content-sections";
 import { siteConfig } from "@/lib/site-config";
 
-export type LandingPageFile = Extract<
-  SourcePageFile,
-  "index.htm" | "english.htm" | "deutsch.htm" | "francais.htm"
->;
-
 const pageVisuals: Record<
-  LandingPageFile,
+  string,
   {
     hero: string;
     heroPosition: string;
@@ -29,25 +22,25 @@ const pageVisuals: Record<
     accentPosition: string;
   }
 > = {
-  "index.htm": {
+  no: {
     hero: "/images/hero-forest-path.jpg",
     heroPosition: "object-center",
     accent: "/images/section-path.jpg",
     accentPosition: "object-[center_40%]",
   },
-  "english.htm": {
+  en: {
     hero: "/images/language-english.jpg",
     heroPosition: "object-[center_55%]",
     accent: "/images/section-moss.jpg",
     accentPosition: "object-center",
   },
-  "deutsch.htm": {
+  de: {
     hero: "/images/language-deutsch.jpg",
     heroPosition: "object-center",
     accent: "/images/appointments-forest.jpg",
     accentPosition: "object-center",
   },
-  "francais.htm": {
+  fr: {
     hero: "/images/language-francais.jpg",
     heroPosition: "object-[center_40%]",
     accent: "/images/section-water.jpg",
@@ -55,48 +48,21 @@ const pageVisuals: Record<
   },
 };
 
-const heroCopy: Record<
-  LandingPageFile,
-  { headline: string | [string, string]; name: string; support: string }
-> = {
-  "index.htm": {
-    headline: ["Velkommen til", siteConfig.brand],
-    name: siteConfig.therapistName,
-    support:
-      "Du er velkommen til å ta kontakt hvis du føler at du har det vanskelig psykisk og ønsker å gjøre noe med det.",
-  },
-  "english.htm": {
-    headline: "Therapy in English",
-    name: siteConfig.therapistName,
-    support: `Welcome to ${siteConfig.brand}.`,
-  },
-  "deutsch.htm": {
-    headline: "Therapie auf Deutsch",
-    name: siteConfig.therapistName,
-    support: `Herzlich willkommen zu ${siteConfig.brand}.`,
-  },
-  "francais.htm": {
-    headline: "Thérapie en français",
-    name: siteConfig.therapistName,
-    support: `Bienvenue à ${siteConfig.brand}.`,
-  },
-};
-
-function splitLandingContent(
-  content: string,
-  file: LandingPageFile,
-): ContentChunk[] {
+function splitLandingContent(content: string): ContentChunk[] {
   const { body } = extractH1(content);
   const lines = body.split("\n");
   let i = 0;
   while (i < lines.length && lines[i].trim() === "") i += 1;
 
-  if (file !== "index.htm" && i < lines.length) {
+  // Drop redundant welcome line already used in the hero.
+  if (i < lines.length) {
     const first = lines[i].trim().toLowerCase();
     if (
-      first.startsWith("welcome to") ||
-      first.startsWith("herzlich willkommen") ||
-      first.startsWith("bienvenue")
+      first.startsWith("du er velkommen til å ta kontakt") ||
+      first.startsWith("you are welcome to get in touch") ||
+      first.startsWith("sie sind herzlich eingeladen") ||
+      first.startsWith("n’hésitez pas") ||
+      first.startsWith("n'hésitez pas")
     ) {
       i += 1;
       while (i < lines.length && lines[i].trim() === "") i += 1;
@@ -130,12 +96,34 @@ function AccentImage({
   );
 }
 
-export async function LandingPageView({ file }: { file: LandingPageFile }) {
-  const t = await getTranslations("Nav");
-  const page = getSourcePage(file);
-  const visuals = pageVisuals[file];
-  const hero = heroCopy[file];
-  const sections = splitLandingContent(page.content, file);
+function ClinicCaption({
+  line1,
+  line2,
+  line3,
+}: {
+  line1: string;
+  line2: string;
+  line3: string;
+}) {
+  return (
+    <>
+      <p className="type-caption text-secondary">{line1}</p>
+      <p className="type-label mt-1.5 text-on-surface-variant">
+        {line2}, {line3}
+      </p>
+    </>
+  );
+}
+
+export async function LandingPageView() {
+  const locale = await getLocale();
+  const tNav = await getTranslations("Nav");
+  const tHome = await getTranslations("Home");
+  const tSite = await getTranslations("Site");
+  const file = homePageForLocale(locale);
+  const page = getSourcePage(file, locale);
+  const visuals = pageVisuals[locale] ?? pageVisuals.no;
+  const sections = splitLandingContent(page.content);
   const contentSections = sections.filter((s) => s.kind === "content");
   const primary = contentSections[0];
   const secondary = contentSections.slice(1);
@@ -157,27 +145,24 @@ export async function LandingPageView({ file }: { file: LandingPageFile }) {
 
         <div className="container-site relative flex min-h-[68vh] flex-col justify-end pb-12 pt-24 sm:min-h-[78vh] sm:pb-24 sm:pt-28">
           <div className="animate-fade-up mb-5 text-white sm:mb-6">
-            <SiteLogo size="md" className="sm:[&_.logo-mark]:h-11 sm:[&_.logo-mark]:w-11 sm:[&_.logo-word]:text-[1.5rem]" />
+            <SiteLogo
+              size="md"
+              className="sm:[&_.logo-mark]:h-11 sm:[&_.logo-mark]:w-11 sm:[&_.logo-word]:text-[1.5rem]"
+            />
           </div>
           <h1 className="type-display animate-fade-up max-w-3xl text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
-            {Array.isArray(hero.headline) ? (
-              <>
-                {hero.headline[0]}
-                <br />
-                {hero.headline[1]}
-              </>
-            ) : (
-              hero.headline
-            )}
+            {tHome("headlineLine1")}
+            <br />
+            {tHome("headlineLine2")}
           </h1>
           <p className="type-title animate-fade-up mt-4 text-white/95 sm:mt-5">
-            {hero.name}
+            {siteConfig.therapistName}
           </p>
           <p className="type-label animate-fade-up mt-2 text-white/75">
-            {siteConfig.specialty}
+            {tSite("specialty")}
           </p>
           <p className="type-body-lg animate-fade-up mt-5 max-w-xl text-pretty text-white/90 sm:mt-6">
-            {hero.support}
+            {tHome("support")}
           </p>
           <div
             className="animate-fade-up mt-8 flex w-full flex-col gap-3 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center"
@@ -188,7 +173,7 @@ export async function LandingPageView({ file }: { file: LandingPageFile }) {
               variant="primary"
               className="w-full sm:w-auto"
             >
-              {t("book")}
+              {tNav("book")}
             </ButtonLink>
             <ButtonLink
               href={siteConfig.phoneHref}
@@ -215,6 +200,13 @@ export async function LandingPageView({ file }: { file: LandingPageFile }) {
                 src={visuals.accent}
                 position={visuals.accentPosition}
               />
+              <div className="mt-5">
+                <ClinicCaption
+                  line1={tSite("clinicLine1")}
+                  line2={siteConfig.clinicLine2}
+                  line3={siteConfig.clinicLine3}
+                />
+              </div>
             </aside>
           </div>
         </section>
