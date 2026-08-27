@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import type { ReactNode } from "react";
 
 import { SourceMarkdown } from "@/components/content/source-markdown";
 import { SiteLogo } from "@/components/layout/site-logo";
@@ -58,10 +57,10 @@ const pageVisuals: Record<
 
 const heroCopy: Record<
   LandingPageFile,
-  { headline: string; name: string; support: string }
+  { headline: string | [string, string]; name: string; support: string }
 > = {
   "index.htm": {
-    headline: `Velkommen til ${siteConfig.brand}`,
+    headline: ["Velkommen til", siteConfig.brand],
     name: siteConfig.therapistName,
     support:
       "Du er velkommen til å ta kontakt hvis du føler at du har det vanskelig psykisk og ønsker å gjøre noe med det.",
@@ -110,11 +109,9 @@ function splitLandingContent(
 function AccentImage({
   src,
   position,
-  caption,
 }: {
   src: string;
   position: string;
-  caption?: ReactNode;
 }) {
   return (
     <figure className="lg:sticky lg:top-28">
@@ -129,19 +126,7 @@ function AccentImage({
           sizes="(max-width: 1024px) 100vw, 400px"
         />
       </div>
-      {caption ? <figcaption className="mt-5">{caption}</figcaption> : null}
     </figure>
-  );
-}
-
-function ClinicCaption() {
-  return (
-    <>
-      <p className="type-caption text-secondary">{siteConfig.clinicLine1}</p>
-      <p className="type-label mt-1.5 text-on-surface-variant">
-        {siteConfig.clinicLine2}, {siteConfig.clinicLine3}
-      </p>
-    </>
   );
 }
 
@@ -175,7 +160,15 @@ export async function LandingPageView({ file }: { file: LandingPageFile }) {
             <SiteLogo size="lg" />
           </div>
           <h1 className="type-display animate-fade-up max-w-3xl text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
-            {hero.headline}
+            {Array.isArray(hero.headline) ? (
+              <>
+                {hero.headline[0]}
+                <br />
+                {hero.headline[1]}
+              </>
+            ) : (
+              hero.headline
+            )}
           </h1>
           <p className="type-title animate-fade-up mt-5 text-white/95">
             {hero.name}
@@ -213,7 +206,6 @@ export async function LandingPageView({ file }: { file: LandingPageFile }) {
               <AccentImage
                 src={visuals.accent}
                 position={visuals.accentPosition}
-                caption={<ClinicCaption />}
               />
             </aside>
           </div>
