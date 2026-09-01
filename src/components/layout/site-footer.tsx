@@ -32,7 +32,11 @@ export function SiteFooter() {
               {tSite("specialty")}
             </p>
             <p className="type-label text-secondary">
-              {tSite("clinicLine1")}, {siteConfig.clinicLine3}
+              {tSite("clinicLine1")}
+              <br />
+              {siteConfig.clinicLine2}
+              <br />
+              {siteConfig.clinicLine3}
             </p>
           </div>
 

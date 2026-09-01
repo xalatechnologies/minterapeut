@@ -10,7 +10,7 @@ export const siteConfig = {
   postalName: "Min terapeut – Harald Bull-Hanssen",
   postalStreet: "Kolsåslia 28 B",
   postalCity: "1352 Kolsås",
-  orgNumber: "991 165 479",
+  orgNumber: "937 690 916",
   postalFooter:
-    "Postadresse: Min terapeut - Harald Bull-Hanssen, Kolsåslia 28 B, 1352 KOLSÅS - Org.nr.: 991 165 479",
+    "Postadresse: Min terapeut - Harald Bull-Hanssen, Kolsåslia 28 B, 1352 KOLSÅS - Org.nr.: 937 690 916",
 } as const;
