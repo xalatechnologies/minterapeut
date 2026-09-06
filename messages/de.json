@@ -27,13 +27,13 @@
     "closeMenu": "Menü schließen",
     "language": "Sprache",
     "items": {
-      "home": "Willkommen bei Min terapeut",
-      "therapy": "Was kann ein Psychotherapeut für mich tun?",
+      "home": "Start",
+      "therapy": "Über Therapie",
       "whenHelp": "Sollte ich erwägen, in Therapie zu gehen?",
       "seeingPsychologist": "Ist es eine Niederlage, in Therapie zu gehen?",
-      "appointments": "Termine und Preise",
+      "appointments": "Termine",
       "publicCare": "Öffentliche Behandlungsangebote",
-      "about": "Wer ist Psychotherapeut Harald Bull-Hanssen?",
+      "about": "Über mich",
       "english": "English",
       "deutsch": "Deutsch",
       "francais": "Français"

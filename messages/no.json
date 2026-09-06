@@ -27,13 +27,13 @@
     "closeMenu": "Lukk meny",
     "language": "Språk",
     "items": {
-      "home": "Velkommen til Min terapeut",
-      "therapy": "Hva kan en psykoterapeut gjøre for meg?",
+      "home": "Hjem",
+      "therapy": "Om terapi",
       "whenHelp": "Bør jeg vurdere å gå i terapi?",
       "seeingPsychologist": "Er det et nederlag å gå i terapi?",
-      "appointments": "Timeavtaler og priser",
+      "appointments": "Timeavtaler",
       "publicCare": "Offentlige behandlingstilbud",
-      "about": "Hvem er psykoterapeut Harald Bull-Hanssen?",
+      "about": "Om meg",
       "english": "English",
       "deutsch": "Deutsch",
       "francais": "Français"

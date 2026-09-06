@@ -11,12 +11,12 @@
     "nav": [
       {
         "href": "/",
-        "label": "Velkommen til Min terapeut",
+        "label": "Hjem",
         "file": "index.htm"
       },
       {
         "href": "/hva",
-        "label": "Hva kan en psykoterapeut gjøre for meg?",
+        "label": "Om terapi",
         "file": "hva.htm"
       },
       {
@@ -31,7 +31,7 @@
       },
       {
         "href": "/timebestilling",
-        "label": "Timeavtaler og priser",
+        "label": "Timeavtaler",
         "file": "timebestilling.htm"
       },
       {
@@ -41,7 +41,7 @@
       },
       {
         "href": "/hvem",
-        "label": "Hvem er psykoterapeut Harald Bull-Hanssen?",
+        "label": "Om meg",
         "file": "hvem.htm"
       },
       {
