@@ -29,10 +29,10 @@
     "items": {
       "home": "Accueil",
       "therapy": "Thérapie",
-      "whenHelp": "Quand chercher de l'aide",
-      "seeingPsychologist": "Aller en thérapie",
+      "whenHelp": "Devrais-je envisager d’aller en thérapie ?",
+      "seeingPsychologist": "Est-ce un échec d’aller en thérapie ?",
       "appointments": "Séances",
-      "publicCare": "Soins publics",
+      "publicCare": "Offres de traitement publiques",
       "about": "À propos",
       "english": "English",
       "deutsch": "Deutsch",

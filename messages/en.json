@@ -29,10 +29,10 @@
     "items": {
       "home": "Home",
       "therapy": "About therapy",
-      "whenHelp": "When to seek help",
-      "seeingPsychologist": "Going into therapy",
+      "whenHelp": "Should I consider going into therapy?",
+      "seeingPsychologist": "Is it a defeat to go into therapy?",
       "appointments": "Appointments",
-      "publicCare": "Public care",
+      "publicCare": "Public treatment services",
       "about": "About me",
       "english": "English",
       "deutsch": "Deutsch",
