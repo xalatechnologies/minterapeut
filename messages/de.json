@@ -17,6 +17,17 @@
     "headlineLine2": "Min terapeut",
     "support": "Sie sind herzlich eingeladen, Kontakt aufzunehmen, wenn Sie sich psychisch belastet fühlen und etwas dagegen tun möchten."
   },
+  "Appointments": {
+    "visitTitle": "Kontakt und Adresse",
+    "call": "Telefon",
+    "callAction": "Anrufen",
+    "email": "E-Mail",
+    "hours": "Öffnungszeiten",
+    "hoursValue": "08:30–16:30, und 19:00–21:00 an bestimmten Abenden bei Bedarf",
+    "address": "Adresse",
+    "openMaps": "In Google Maps öffnen",
+    "mapTitle": "Karte der Praxis in Sandvika"
+  },
   "Nav": {
     "main": "Hauptnavigation",
     "contact": "Kontakt",

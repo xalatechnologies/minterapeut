@@ -40,10 +40,20 @@ export function ButtonLink({
   if (
     href.startsWith("tel:") ||
     href.startsWith("mailto:") ||
-    href.startsWith("#")
+    href.startsWith("#") ||
+    href.startsWith("http://") ||
+    href.startsWith("https://")
   ) {
+    const isExternal = href.startsWith("http");
     return (
-      <a href={href} className={classNames} onClick={onClick}>
+      <a
+        href={href}
+        className={classNames}
+        onClick={onClick}
+        {...(isExternal
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+      >
         {children}
       </a>
     );

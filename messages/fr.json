@@ -17,6 +17,17 @@
     "headlineLine2": "Min terapeut",
     "support": "N’hésitez pas à prendre contact si vous traversez une période difficile sur le plan psychique et souhaitez y remédier."
   },
+  "Appointments": {
+    "visitTitle": "Contact et adresse",
+    "call": "Téléphone",
+    "callAction": "Appeler",
+    "email": "E-mail",
+    "hours": "Horaires",
+    "hoursValue": "08:30–16:30, et 19:00–21:00 certains soirs selon les besoins",
+    "address": "Adresse",
+    "openMaps": "Ouvrir dans Google Maps",
+    "mapTitle": "Carte du cabinet à Sandvika"
+  },
   "Nav": {
     "main": "Navigation principale",
     "contact": "Contact",

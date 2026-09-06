@@ -17,6 +17,17 @@
     "headlineLine2": "Min terapeut",
     "support": "You are welcome to get in touch if you are struggling psychologically and want to do something about it."
   },
+  "Appointments": {
+    "visitTitle": "Contact and address",
+    "call": "Phone",
+    "callAction": "Call",
+    "email": "Email",
+    "hours": "Opening hours",
+    "hoursValue": "08:30–16:30, and 19:00–21:00 on certain evenings as needed",
+    "address": "Address",
+    "openMaps": "Open in Google Maps",
+    "mapTitle": "Map of the clinic in Sandvika"
+  },
   "Nav": {
     "main": "Main navigation",
     "contact": "Contact",
