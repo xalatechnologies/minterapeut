@@ -89,8 +89,7 @@ export function SiteFooter() {
         </div>
 
         <nav className="md:col-span-5" aria-label={t("links")}>
-          <h2 className="type-caption text-secondary">{t("links")}</h2>
-          <ul className="mt-4 flex flex-col gap-2.5">
+          <ul className="flex flex-col gap-2.5">
             {pageLinks.map((item) => {
               const key = FOOTER_PAGE_KEYS[item.href];
               return (
