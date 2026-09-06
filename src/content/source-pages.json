@@ -11,12 +11,12 @@
     "nav": [
       {
         "href": "/",
-        "label": "Hjem",
+        "label": "Velkommen til Min terapeut",
         "file": "index.htm"
       },
       {
         "href": "/hva",
-        "label": "Om terapi",
+        "label": "Hva kan en psykoterapeut gjøre for meg?",
         "file": "hva.htm"
       },
       {
@@ -31,7 +31,7 @@
       },
       {
         "href": "/timebestilling",
-        "label": "Timeavtaler",
+        "label": "Timeavtaler og priser",
         "file": "timebestilling.htm"
       },
       {
@@ -41,7 +41,7 @@
       },
       {
         "href": "/hvem",
-        "label": "Om meg",
+        "label": "Hvem er psykoterapeut Harald Bull-Hanssen?",
         "file": "hvem.htm"
       },
       {
@@ -90,7 +90,7 @@
       "file": "timebestilling.htm",
       "heading": "Timeavtaler og priser",
       "image": "images/page-appointments.jpg",
-      "content": "# *Timeavtaler og priser*\n\n***Når foregår behandlingen?***\n\nBehandlingen hos *Min terapeut* skjer på kveldstid, fra kl. 19:30 til kl. 22:30.\n\n***Hva koster\nbehandlingen?***\n\nEn time med individualterapi koster kr 1500,– .\n\n***Rammer for timene***\n\nEn time varer i 45 minutter. En time kan på forhånd avtales som en dobbelttime. En timeavtale kan også utvides til en dobbelttime i løpet av timen, men det forutsetter at den ikke kolliderer med påfølgende timeavtaler.\n\n***Må jeg betale alt\nselv?***\n\nJa, du må betale alt selv, for *Min terapeut* har foreløpig ingen\ndriftsavtale med det offentlige. Du mottar kvittering\nfor alle honorarer. Noen vil kanskje ha mulighet til å\nlegge disse frem for forsikringsselskap, arbeidsgiver eller andre.\n\n***Hvor foregår\nbehandlingen?***\n\n*Min terapeut* holder til ved Tinghuset i Sandvika, i Anthon Walles vei 36, 1337 Sandvika. Det er kort gangavstand til Sandvika togstasjon og bussterminal. Det er gratis offentlig parkering på kveldstid.\n\n***Hvor ofte går man til timeavtaler, og\nhvor lenge varer psykoterapi?***\n\nDet er vanlig å ha en time i uken når man går i terapi.\nDet er vanskelig å angi hvor mange timeavtaler den enkelte klient behøver, fordi dette varierer fra klient til klient. Men mange klienter hos *Min terapeut* opplever at det\ner tilstrekkelig med mellom ti og tolv terapitimer."
+      "content": "# *Timeavtaler og priser*\n\n***Når foregår behandlingen?***\n\nTjenesten er åpen fra kl. 08:30 til kl. 16:30, og fra kl. 19:00 til kl. 21:00 enkelte kvelder ved behov.\n\n***Hva koster\nbehandlingen?***\n\nEn time med individualterapi koster kr 1500,– .\n\n***Rammer for timene***\n\nEn time varer i 45 minutter. En time kan på forhånd avtales som en dobbelttime. En timeavtale kan også utvides til en dobbelttime i løpet av timen, men det forutsetter at den ikke kolliderer med påfølgende timeavtaler.\n\n***Må jeg betale alt\nselv?***\n\nJa, du må betale alt selv, for *Min terapeut* har foreløpig ingen\ndriftsavtale med det offentlige. Du mottar kvittering\nfor alle honorarer. Noen vil kanskje ha mulighet til å\nlegge disse frem for forsikringsselskap, arbeidsgiver eller andre.\n\n***Hvor foregår\nbehandlingen?***\n\n*Min terapeut* holder til ved Tinghuset i Sandvika, i Anthon Walles vei 36, 1337 Sandvika. Det er kort gangavstand til Sandvika togstasjon og bussterminal. Det er gratis offentlig parkering på kveldstid.\n\n***Hvor ofte går man til timeavtaler, og\nhvor lenge varer psykoterapi?***\n\nDet er vanlig å ha en time i uken når man går i terapi. Noen klienter ønsker sjeldnere timeavtaler, og det avtaler vi i henhold til klientens behov og ønsker. Det er vanskelig å angi hvor mange timeavtaler den enkelte klient behøver, fordi dette varierer fra klient til klient. Men mange klienter hos *Min terapeut* opplever at det\ner tilstrekkelig med mellom ti og tolv terapitimer."
     },
     "offentlig.htm": {
       "file": "offentlig.htm",
@@ -100,9 +100,9 @@
     },
     "hvem.htm": {
       "file": "hvem.htm",
-      "heading": "Hvem er psykolog Harald Bull-Hanssen?",
+      "heading": "Hvem er psykoterapeut Harald Bull-Hanssen?",
       "image": "images/harald-bull-hanssen.jpg",
-      "content": "# *Hvem er psykolog Harald Bull-Hanssen?*\n\nJeg, Harald Bull-Hanssen, er utdannet psykolog fra Tyskland og Frankrike. I 2007 fikk jeg norsk autorisasjon for å praktisere som psykolog, fra Statens Autorisasjonskontor for Helsepersonell (SAFH). I 2014 ble jeg godkjent som psykoterapeut av Norsk Psykologforening.\n\nJeg har arbeidet som psykolog ved Modum Bad, deretter ved Rehabiliteringspoliklinikken ved Bærum DPS (Distriktspsykiatriske Senter) ved Vestre Viken HF. Jeg har også arbeidet et år ved Bærum BUPA (Barne- og ungdomspsykiatrisk avdeling) ved Vestre Viken HF. Senere var jeg ansatt ved Kompetansesenter for sikkerhets-, fengsels- og rettspsykiatri for Helseregion Sør-Øst ved Oslo Universitetssykehus, der jeg gjennomførte gruppeterapi (ROS) for innsatte ved Ila fengsel og forvaringsanstalt. Deretter arbeidet jeg som psykolog ved Ringerike DPS på Hønefoss.\n\nNå driver jeg privat praksis på heltid."
+      "content": "# *Hvem er psykoterapeut Harald Bull-Hanssen?*\n\nJeg, Harald Bull-Hanssen, er utdannet psykolog fra Tyskland og Frankrike. I 2007 fikk jeg norsk autorisasjon for å praktisere som psykolog, fra Statens Autorisasjonskontor for Helsepersonell (SAFH). I 2014 ble jeg godkjent som psykoterapeut av Norsk Psykologforening.\n\nJeg har arbeidet som psykolog ved Modum Bad, deretter ved Rehabiliteringspoliklinikken ved Bærum DPS (Distriktspsykiatriske Senter) ved Vestre Viken HF. Jeg har også arbeidet et år ved Bærum BUPA (Barne- og ungdomspsykiatrisk avdeling) ved Vestre Viken HF. Senere var jeg ansatt ved Kompetansesenter for sikkerhets-, fengsels- og rettspsykiatri for Helseregion Sør-Øst ved Oslo Universitetssykehus, der jeg gjennomførte gruppeterapi (ROS) for innsatte ved Ila fengsel og forvaringsanstalt. Deretter arbeidet jeg som psykolog ved Ringerike DPS på Hønefoss.\n\nNå driver jeg privat praksis på heltid."
     },
     "english.htm": {
       "file": "english.htm",

@@ -27,13 +27,13 @@
     "closeMenu": "Fermer le menu",
     "language": "Langue",
     "items": {
-      "home": "Accueil",
-      "therapy": "Thérapie",
+      "home": "Bienvenue chez Min terapeut",
+      "therapy": "Que peut faire un psychothérapeute pour moi ?",
       "whenHelp": "Devrais-je envisager d’aller en thérapie ?",
       "seeingPsychologist": "Est-ce un échec d’aller en thérapie ?",
-      "appointments": "Séances",
+      "appointments": "Rendez-vous et tarifs",
       "publicCare": "Offres de traitement publiques",
-      "about": "À propos",
+      "about": "Qui est le psychothérapeute Harald Bull-Hanssen ?",
       "english": "English",
       "deutsch": "Deutsch",
       "francais": "Français"
