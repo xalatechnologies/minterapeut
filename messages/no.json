@@ -48,14 +48,23 @@
   },
   "Footer": {
     "contact": "Kontakt",
-    "links": "Meny",
+    "links": "Sider",
     "postal": "Postadresse",
     "org": "Org.nr.",
     "phone": "Telefon",
     "clinic": "Klinikk",
     "email": "E-post",
     "languages": "Språk",
-    "partner": "Utviklet av"
+    "partner": "Utviklet av",
+    "pages": {
+      "home": "Velkommen til Min terapeut",
+      "therapy": "Hva kan en psykoterapeut gjøre for meg?",
+      "whenHelp": "Bør jeg vurdere å gå i terapi?",
+      "seeingPsychologist": "Er det et nederlag å gå i terapi?",
+      "appointments": "Timeavtaler og priser",
+      "publicCare": "Offentlige behandlingstilbud",
+      "about": "Hvem er psykoterapeut Harald Bull-Hanssen?"
+    }
   },
   "Contact": {
     "title": "Kontakt",

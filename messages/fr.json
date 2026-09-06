@@ -48,14 +48,23 @@
   },
   "Footer": {
     "contact": "Contact",
-    "links": "Menu",
+    "links": "Pages",
     "postal": "Adresse postale",
     "org": "N° d'org.",
     "phone": "Téléphone",
     "clinic": "Cabinet",
     "email": "E-mail",
     "languages": "Langues",
-    "partner": "Développé par"
+    "partner": "Développé par",
+    "pages": {
+      "home": "Bienvenue chez Min terapeut",
+      "therapy": "Que peut faire un psychothérapeute pour moi ?",
+      "whenHelp": "Devrais-je envisager d’aller en thérapie ?",
+      "seeingPsychologist": "Est-ce un échec d’aller en thérapie ?",
+      "appointments": "Rendez-vous et tarifs",
+      "publicCare": "Offres de traitement publiques",
+      "about": "Qui est le psychothérapeute Harald Bull-Hanssen ?"
+    }
   },
   "Contact": {
     "title": "Contact",

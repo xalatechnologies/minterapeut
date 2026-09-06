@@ -48,14 +48,23 @@
   },
   "Footer": {
     "contact": "Contact",
-    "links": "Menu",
+    "links": "Pages",
     "postal": "Postal address",
     "org": "Org. no.",
     "phone": "Phone",
     "clinic": "Clinic",
     "email": "Email",
     "languages": "Languages",
-    "partner": "Developed by"
+    "partner": "Developed by",
+    "pages": {
+      "home": "Welcome to Min terapeut",
+      "therapy": "What can a psychotherapist do for me?",
+      "whenHelp": "Should I consider going into therapy?",
+      "seeingPsychologist": "Is it a defeat to go into therapy?",
+      "appointments": "Appointments and fees",
+      "publicCare": "Public treatment services",
+      "about": "Who is psychotherapist Harald Bull-Hanssen?"
+    }
   },
   "Contact": {
     "title": "Contact",
